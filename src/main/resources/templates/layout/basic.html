@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="setContent(content)">
+    <head>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link th:href="@{/css/simple-sidebar.css}" rel="stylesheet">
+
+    <!-- Bootstrap core JavaScript -->
+    <script th:src="@{/vendor/jquery/jquery.min.js}"></script>
+    <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+
+    <title>은평 주민참여플랫폼</title>
+</head>
+
+<body>
+
+<div >
+    <div style="margin-bottom: 20px;">
+        <a href="/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"> 홈</a>
+        <a href="/Suggestion/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">제안</a>
+        <a href="/DiscussionTopics/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">토론주제</a>
+        <a href="/VoteTopics/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">투표주제</a>
+
+        <a href="/Action/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">실행</a>
+        <a href="/Meeting/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">모임</a>
+        <a href="/board/list" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">알림</a>
+
+
+
+    </div>
+
+    <div class="container-fluid">
+
+        <th:block th:replace = "${content}"></th:block>
+
+    </div>
+
+</div>
+<!-- /#wrapper -->
+
+
+</body>
+</th:block>
+</html>
+

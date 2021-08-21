@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+    <th:block th:fragment="content">
+
+
+        <div> 토론주제 >  토론게시판</div>
+        의견(토론)  리스트      <a href="/Discussion/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">토론글 작성</a>
+
+    </th:block>
+
+
+</th:block>
