@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+
+    <th:block th:fragment="content">
+
+        <h3 class="w-100 p-3 text-center">그룹 생성하기  </h3>
+
+        <table class="mytable">
+            <tr>
+                <td>그룹명 </td>
+                <td><input type="text\"></td>
+            </tr>
+            <tr>
+                <td>슬러그 </td>
+                <td><input type="text\"> 최초입력후 수정 불가</td>
+            </tr>
+            <tr>
+                <td>그룹소개</td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td>그룹정책</td>
+                <td><textarea></textarea></td>
+            </tr>
+
+        </table>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+    </th:block>
+
+</th:block>

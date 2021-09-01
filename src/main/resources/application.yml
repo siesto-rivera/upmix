@@ -1,16 +1,21 @@
 spring:
   datasource:
-    url: jdbc:h2:tcp://localhost/~/test
-    username: sa
-    password:
-    driver-class-name: org.h2.Driver
+    #driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    driverClassName : com.mysql.jdbc.Driver
+    url: jdbc:mysql://dev-instance-1.ct5gn8pdzo8f.ap-northeast-2.rds.amazonaws.com:3306/siesto?autoReconnect=true&useSSL=false&serverTimezone=Asia/Seoul&useUnicode=true&characterEncoding=UTF-8
+    hikari:
+      username: siesto
+      password: Tldptmxh
+      maximum-pool-size: 10
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
     properties:
       hibernate:
         show_sql: true
         format_sql: true
+server:
+  port: 8081
 logging.level:
   org.hibernate.SQL: debug
   org.hibernate.type: trace

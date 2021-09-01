@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+
+    <th:block th:fragment="content">
+
+
+        <h3 class="w-100 p-3 text-center"> 소식  작성하기  </h3>
+
+        <table class="mytable">
+            <tr>
+                <td>공지글 지정(관리자)</td>
+                <td></td>
+            </tr>
+
+
+            <tr>
+                <td>제목</td>
+                <td><input type="text" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>내용</td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01">파일첨부</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>대표이미지 </td>
+                <td>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01">파일첨부</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+        </table>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+    </th:block>
+
+</th:block>

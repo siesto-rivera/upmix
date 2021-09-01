@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+    <th:block th:fragment="content">
+        <h3 class="w-100 p-3 text-center"> 실행 상세보기  </h3>
+
+        <div>현재단계를 볼 수 있습니다.</div>
+        <div>관련제안과  공감/댓글 숫자를 볼 수 있습니다.</div>
+        <div>관련토론과  찬성수를 볼 수 있습니다.</div>
+        <div>관련투표와  찬성수를 볼 수 있습니다.</div>
+
+
+        <div>관련제안, 토론, 투표를 볼 수 있습니다.</div>
+        <div><div th:replace="/common/sns_share" /> ️</div>
+        <div>게시글 제목/내용/첨부파일/해시태그 ️</div>
+        <div>실행지역의 지도표시</div>
+        <div>댓글 /댓글리스트  /댓글 신고 ️</div>
+        <div>공감 ️</div>
+
+
+
+
+        <a href="/Action/write" class="btn btn-primary">수정하기(관리자)</a>
+
+
+
+
+    </th:block>
+
+
+</th:block>

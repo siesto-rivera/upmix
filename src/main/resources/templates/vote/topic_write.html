@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+
+    <th:block th:fragment="content">
+
+        <h3 class="w-100 p-3 text-center"> 투표 글쓰기  </h3>
+
+        <table  class="mytable">
+            <tr>
+                <td>분류선택</td>
+                <td>교통/주택/보건.....</td>
+            </tr>
+            <tr>
+                <td>관련토론선택</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>투표기간</td>
+                <td>시작일~종료일</td>
+            </tr>
+            <tr>
+                <td>제목</td>
+                <td><input type="text" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>본문</td>
+                <td>
+                    <textarea name="opinion" cols="30" rows="5"></textarea>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupFileAddon01">파일첨부</span>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>주소</td>
+                <td><input type="text" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>해시태그</td>
+                <td><input type="text" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>투표유형 </td>
+                <td>
+                    <label><input type="radio" name="fruit" value="apple"> 찬반투표</label>
+                    <label><input type="radio" name="fruit" value="banana"> 우선순위투표</label>
+                </td>
+            </tr>
+            <tr>
+                <td>투표항목</td>
+                <td>(투표 항목)의  제목과 내용, 이미지를 입력할 수 있습니다.(찬반 또는 다중선택 항목들) </td>
+            </tr>
+
+            <tr>
+                <td>결과노출방법</td>
+                <td> (참여시 결과 노출, 마감후 결과 노출, 결과 노출 안함) 선택할 수 있습니다.</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input class="form-check-input" type="checkbox" value="" >
+                    <label class="form-check-label" for="defaultCheck1">
+                        익명투표 여부선택
+                    </label>
+                </td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td >
+                    <input class="form-check-input" type="checkbox" value="" >
+                    <label class="form-check-label" for="defaultCheck1">
+                        문자인증 여부선택
+                    </label>
+                </td>
+
+            </tr>
+
+        </table>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+    </th:block>
+
+</th:block>

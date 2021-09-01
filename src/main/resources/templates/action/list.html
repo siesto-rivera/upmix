@@ -2,11 +2,61 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
     <th:block th:fragment="content">
-        실행
+
+        <h3 class="w-100 p-3 text-center"> 실행  </h3>
+
+        <div>
+            (지도로 보기 형태)실행 기록 지도 보기 버튼으로 지도 노출 방식으로 바꿀 수 있습니다.
+            <br>
+            이경우 게시물 핀에 마우스 커서를 가져가면 게시물 요약(제목, 썸네일, 본문 일부)이 보입니다.
+        </div>
+
+        <div class="input-group">
+            <input type="hidden" name="page" value = "1">
+            <div class="input-group-prepend">
+                <span style="width: 200px;">검색: 분류값에 따라 검색</span>
+
+            </div>
+
+        </div>
+        <div>정렬: 최신순/참여/의견순</div>
+        <div class="container">
+
+            <div class="card " style="width: 18rem;" >
+
+                <div class="card-body">
+                    <span class="badge badge-success">주제 라벨</span>
+                    <h5 class="card-title">제목</h5>
+                    <p class="card-text">본문일부(요약)</p>
+
+
+                    </p>
+                    <a href="/Action/read" class="btn btn-primary">상세페이지</a>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="container">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div>
+            <a href="/Action/write" class="btn btn-primary">실행 글쓰기(관리자)</a>
+        </div>
 
     </th:block>
-
-
 
 
 </th:block>

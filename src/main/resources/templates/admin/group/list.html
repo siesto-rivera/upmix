@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+  <th:block th:fragment="content">
+
+    <div style="text-align: right">
+      <a href="/Admin/Group" class="btn btn-primary">그룹관리 </a>
+      <a href="/Admin/User" class="btn btn-primary">회원관리 </a>
+
+    </div>
+    <h3 class="w-100 p-3 text-center">  그룹관리  </h3>
+
+
+
+
+    <div>
+
+      <a href="/Admin/Group/write" class="btn btn-primary">그룹추가 </a>
+
+    </div>
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">그룹명</th>
+        <th scope="col">슬러그</th>
+        <th scope="col">생성일</th>
+        <th scope="col">#</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td><a href="/Admin/Group/read"  >녹번동 </a></td>
+        <td>green</td>
+        <td>2020-10-10</td>
+        <td>
+
+
+        </td>
+
+      </tr>
+      <tr>
+        <th scope="row">1</th>
+        <td><a href="/Group/read"  >구산동 </a></td>
+        <td>green</td>
+        <td>2020-10-10</td>
+        <td></td>
+
+      </tr><tr>
+        <th scope="row">1</th>
+        <td><a href="/Group/read"  >역촌동 </a></td>
+        <td>green</td>
+        <td>2020-10-10</td>
+        <td></td>
+
+      </tr>
+      </tbody>
+    </table>
+
+  </th:block>
+
+
+</th:block>

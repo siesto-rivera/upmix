@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+    <th:block th:fragment="content">
+        <h3 class="w-100 p-3 text-center"> 내 그룹 관리  </h3>
+
+
+        <table class="mytable">
+            <tr><td>그룹명 </td><td>녹번동 그룹</td></tr>
+            <tr><td>slug</td><td></td></tr>
+            <tr><td>생성일</td><td></td></tr>
+            <tr><td>소개/그룹정책</td><td></td></tr>
+            <tr><td></td><td><a href="/Admin/Group/write" class="btn btn-secondary"> 그룹정보 수정</a> </td></tr>
+            <tr><td></td><td></td></tr>
+            <tr><td></td><td></td></tr>
+        </table>
+
+        <div style="text-align: center"><a href="" class="btn btn-primary"> 그룹회원관리</a> </div>
+
+        <br>
+
+
+        <div style="text-align: center"><h4>게시판 관리 </h4></div>
+
+        <table class="mytable">
+
+            <tr><td><a href="" class="btn btn-secondary"> 제안 게시판 관리</a></td><td>제안기간/공감갯수 지정합니다.</td> </tr>
+            <tr><td><a href="" class="btn btn-secondary"> 토론 게시판 관리</a></td><td>토론 게시판은 토론 기간, 찬성 달성 개수를 지정합니다 </td> </tr>
+            <tr><td><a href="" class="btn btn-secondary"> 투표게시판 관리</a></td><td></td> </tr>
+            <tr><td><a href="" class="btn btn-secondary"> 실행 게시판 관리</a> </td><td></td> </tr>
+            <tr><td> <a href="" class="btn btn-secondary"> 모임 게시판 관리</a> </td><td></td> </tr>
+            <tr><td> <a href="" class="btn btn-secondary"> 소식 게시판 관리</a> </td><td></td> </tr>
+
+        </table>
+        <div style="text-align: center"><h4>게시판 추가 선택</h4></div>
+        <table class="mytable">
+            <tr>
+                <td>
+
+                    <input type="checkbox" />게시판1 &nbsp;&nbsp;&nbsp;<a href="" class="btn btn-secondary"> 게시판 관리</a>    <br>
+                    <input type="checkbox" />게시판2&nbsp;&nbsp;&nbsp;<a href="" class="btn btn-secondary"> 게시판 관리</a>    <br>
+                    <input type="checkbox" />게시판3&nbsp;&nbsp;&nbsp;<a href="" class="btn btn-secondary"> 게시판 관리</a>    <br>
+                    <input type="checkbox" />게시판4&nbsp;&nbsp;&nbsp;<a href="" class="btn btn-secondary"> 게시판 관리</a>    <br>
+                    <input type="checkbox" />게시판5&nbsp;&nbsp;&nbsp;<a href="" class="btn btn-secondary"> 게시판 관리</a>    <br>
+                    <input type="checkbox" />게시판6&nbsp;&nbsp;&nbsp;<a href="" class="btn btn-secondary"> 게시판 관리</a>    <br>
+
+                </td>
+            </tr>
+
+        </table>
+
+
+
+        <div>제안, 토론, 투표, 실행 현황 요약 정보를 확인합니다.</div>
+        <div>게시판 데이터 다운로드</div>
+        <div><a href="" class="btn badge-secondary"> 배너관리</a>
+            <a href="" class="btn badge-secondary"> 팝업관리</a>
+        </div>
+        <div></div>
+        <div></div>
+
+
+
+
+
+    </th:block>
+
+
+</th:block>

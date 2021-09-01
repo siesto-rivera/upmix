@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+  <th:block th:fragment="content">
+
+    <div style="text-align: right">
+      <a href="/Admin/Group" class="btn btn-primary">그룹관리 </a>
+      <a href="/Admin/User" class="btn btn-primary">회원관리 </a>
+
+    </div>
+    <h3 class="w-100 p-3 text-center"> 회원 관리  </h3>
+
+
+
+
+
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">이름</th>
+        <th scope="col">이메일</th>
+        <th scope="col">별명</th>
+        <th scope="col">거주지</th>
+        <th scope="col">가입일</th>
+        <th scope="col">로그인</th>
+        <th scope="col">등급</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>아무개</td>
+        <td>이메일</td>
+        <td>이메일</td>
+        <td>이메일</td>
+        <td>2020-10-10</td>
+        <td>2020-10-10</td>
+        <td>동관리자</td>
+
+      </tr>
+      <tr>
+        <th scope="row">1</th>
+        <td>아무개</td>
+        <td>이메일</td>
+        <td>이메일</td>
+        <td>이메일</td>
+        <td>2020-10-10</td>
+        <td>2020-10-10</td>
+        <td>동관리자</td>
+
+      </tr>
+      <tr>
+        <th scope="row">1</th>
+        <td>아무개</td>
+        <td>이메일</td>
+        <td>이메일</td>
+        <td>이메일</td>
+        <td>2020-10-10</td>
+        <td>2020-10-10</td>
+        <td>동관리자</td>
+
+      </tr>
+      </tbody>
+    </table>
+
+  </th:block>
+
+
+</th:block>

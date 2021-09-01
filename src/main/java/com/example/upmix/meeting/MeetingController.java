@@ -1,4 +1,4 @@
-package com.example.upmix.action;
+package com.example.upmix.meeting;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
@@ -6,25 +6,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/Action")
+@RequestMapping("/Meeting")
 @Log4j2
-public class actionController {
+public class MeetingController {
 
-    @GetMapping("")
+    @GetMapping({"", "/list"})
     public String list() {
         log.info("action................");
-        return "/action/list";
+        return "/meeting/list";
     }
 
     @GetMapping("/write")
     public String write(){
-        return "/action/write";
+        return "/meeting/write";
     }
 
     @GetMapping("/read")
     public String read() {
-        return "/action/read";
+        return "/meeting/read";
 
     }
-
 }

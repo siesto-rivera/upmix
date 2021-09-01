@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+    <th:block th:fragment="content">
+        <h3 class="w-100 p-3 text-center"> 모임 상세보기   </h3>
+
+
+        <div>모임날짜/장소/모집기간/모집인원</div>
+
+        <div>게시글 제목/내용/첨부파일 ️</div>
+        <div>게시글 신고 ️</div>
+
+        <div>참가신청하기(신청한 명단은 작성자에게 보입니다.)  / 관리자는 신청명단 다운로드 가능</div>
+        <div>댓글작성 / 댓글목록 /댓글신고 ️</div>
+
+
+
+
+        <a href="/Meeting/write" class="btn btn-primary">수정하기</a>
+
+
+
+
+    </th:block>
+
+
+</th:block>

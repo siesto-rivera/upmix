@@ -2,9 +2,79 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
     <th:block th:fragment="content">
+        <h3 class="w-100 p-3 text-center"> 투표  </h3>
 
 
-        투표 주제 목록      <a href="/Vote/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"> 투표게시판</a>
+        <table>
+            <tr>
+                <td>유형별 필터링:</td>
+                <td>
+                    <select class="custom-select" name="type">
+
+                        <option>찬반투표 </option>
+                        <option>우선순위투표</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>검색:</td>
+                <td>분류값에 따라 검색할 수 있습니다.분류값=카테고리(ex. 교통, 주택, 보건위생.....)?</td>
+            </tr>
+            <tr>
+                <td>정렬:</td>
+                <td>최신순/참여인원순/조회순/댓글수 순</td>
+            </tr>
+            <tr>
+                <td  colspan="2">
+                    <div class="card" style="width: 18rem;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">제목</h5>
+                            <p class="card-text">본문일부...</p>
+                            <p>참여수 /의견수</p>
+                            <p>진행상재: 진행중/진행완료</p>
+                            <p>
+                            <div class="progress">
+                                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            </p>
+                            <a href="/Vote/Topics/read" class="btn btn-primary">상세페이지(참여하기)</a><br>
+                            <a href="/Vote/Topics/read" class="btn btn-primary">결과보기(완료된 투표의 경우)</a>
+
+                        </div>
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td  colspan="2">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+
+
+                </td>
+
+            </tr>
+            <tr>
+                <td  colspan="2">
+                    <a href="/Vote/Topics/write" class="btn btn-primary">투표 글쓰기(관리자)</a>
+                </td>
+
+            </tr>
+
+        </table>
+
+
 
     </th:block>
 

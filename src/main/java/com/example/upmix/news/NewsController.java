@@ -6,13 +6,23 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/Meeting")
+@RequestMapping("/News")
 @Log4j2
-public class meetingController {
-
-    @GetMapping({"/", "/list"})
+class NewsController {
+    @GetMapping("")
     public String list() {
-        log.info("action................");
-        return "/meeting/list";
+
+        return "/news/list";
+    }
+
+    @GetMapping("/write")
+    public String write() {
+        return "/news/write";
+    }
+    @GetMapping({"/read", "/modify"})
+    public String read() {
+        return "/news/read";
+
     }
 }
+

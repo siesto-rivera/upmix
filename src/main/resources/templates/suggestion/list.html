@@ -2,7 +2,95 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
     <th:block th:fragment="content">
-        제안 리스트
+
+        <h3 class="w-100 p-3 text-center"> 제안  </h3>
+
+
+        <table class="mytable">
+            <tr>
+                <td>주제별 필터링</td>
+                <td>
+                    <select class="custom-select" name="type">
+
+                        <option>보건</option>
+                        <option>교통</option>
+                        <option>주거</option>
+
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td>상태별 필터링:</td>
+                <td>
+                    <select class="custom-select" name="type">
+                        <option>진행중 </option>
+                        <option>종료</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>검색:</td>
+                <td> 검색을 하면 제안 게시물 중 해당 키워드가 포함된 게시물 목록이 나옵니다.
+                    <!--                    <select class="custom-select" name="type">-->
+
+<!--                        <option>제목 </option>-->
+<!--                        <option>내용</option>-->
+<!--                        <option>작성자</option>-->
+<!--                        <option>제목+내용</option>-->
+<!--                    </select>-->
+
+                </td>
+            </tr>
+            <tr>
+                <td>정렬:</td>
+                <td>최신순/댓글숫/공감순</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+
+        <div class="container">
+
+            <div class="card " style="width: 18rem;" >
+
+                <div class="card-body">
+                    <h5 class="card-title">제목 [공감달성 라벨]</h5>
+                    <p class="card-text">본문일부(요약)</p>
+                    <p>공감수 /댓글수</p>
+                    <p>진행상재: 진행중/진행완료</p>
+                    <p>
+                    <div class="progress">
+                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">공감달성율 </div>
+                    </div>
+                    </p>
+                    <a href="/Suggestion/read" class="btn btn-primary">상세페이지</a>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="container">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div>
+            <a href="/Suggestion/write" class="btn btn-primary">제안 글쓰기</a>
+        </div>
 
     </th:block>
 

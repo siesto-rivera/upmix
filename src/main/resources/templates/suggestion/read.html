@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+    <th:block th:fragment="content">
+        <h3 class="w-100 p-3 text-center"> 제안 상세보기 </h3>
+
+        <table class="mytable">
+            <tr>
+                <td>현재단계:</td>
+                <td>현재 단계를 볼 수 있습니다. 상단에서 제안마감 기한도 볼 수 있습니다.</td>
+            </tr>
+            <tr>
+                <td>진행여부/제안기간</td>
+                <td>진행중 여부, 제안기간을 볼 수 있습니다. 공감달성 레벨을 볼 수 있습니다.</td>
+            </tr>
+            <tr>
+            <td>분류</td>
+            <td></td>
+            </tr>
+
+            <tr>
+                <td>제목</td>
+                <td>제안제목....</td>
+            </tr>
+            <tr>
+                <td>내용</td>
+                <td>내용  /   첨부파일</td>
+            </tr>
+            <tr>
+                <td>공감하기: </td>
+                <td><div>❤️     공감한 사람들을 볼 수 있습니다.(닉네임)  ️</div></td>
+            </tr>
+            <tr>
+                <td>공유:</td>
+                <td><div th:replace="/common/sns_share" /></td>
+            </tr>
+            <tr>
+                <td>게시물 신고:</td>
+                <td>더보기를 클릭해서 게시물을 신고할 수 있습니다. </td>
+            </tr>
+            <tr>
+                <td>댓글/ 대댓글</td>
+                <td>쓰기  / 댓글리스트/ 댓글.대댓글 신고(신고사유 선택)</td>
+            </tr>
+            <tr>
+                <td>유사제안</td>
+                <td>유사제안을 클릭해서 해당 게시물 상세페이지로 이동합니다 (같은 주제 분류 최신 게시물 3개 노출)</td>
+            </tr>
+        </table>
+
+
+
+
+        <a href="/Suggestion/write" class="btn btn-primary">수정하기</a>
+
+
+
+
+    </th:block>
+
+
+</th:block>

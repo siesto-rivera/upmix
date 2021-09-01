@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+
+  <th:block th:fragment="content">
+
+    <h3 class="w-100 p-3 text-center"> 실행 글쓰기  </h3>
+
+    <form th:action="@{/board/register}" th:method="post">
+
+      <div class="form-group">
+        <label >분류</label>
+        <input type="text" class="form-control" name="title" >
+      </div>
+      <div class="form-group">
+        관련제안/ 관련토론/관련투표 입력
+      </div>
+
+      <div class="form-group">
+        <label >제목</label>
+        <input type="text" class="form-control" name="title" >
+      </div>
+      <div class="form-group">
+        <label >내용</label>
+        <textarea class="form-control" rows="5" name="content"></textarea>
+      </div>
+      <div class="form-group">
+        <label >주소 </label>
+        <input type="text" class="form-control" name="title" >
+      </div>
+      <div class="form-group">
+        <label >해시태그 </label>
+        <input type="text" class="form-control" name="title" >
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupFileAddon01">파일첨부</span>
+        </div>
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+  </th:block>
+
+</th:block>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+  <th:block th:fragment="content">
+
+    <h3 class="w-100 p-3 text-center"> My Page   </h3>
+
+
+
+    <div>
+      <a href="/Action/write" class="btn btn-primary">무엇 </a>
+    </div>
+
+  </th:block>
+
+
+</th:block>

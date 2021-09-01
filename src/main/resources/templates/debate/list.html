@@ -4,52 +4,55 @@
     <th:block th:fragment="content">
 
 
-        <h3 class="w-100 p-3 text-center"> 모임  </h3>
-        <div>정렬: 최신순/댓글 순</div>
-        <div class="input-group-prepend">
-            <span style="width: 200px;">검색</span>
+        <h3 class="w-100 p-3 text-center"> 토론  </h3>
 
+        <div>정렬: 최신순/댓글숫/공감순</div>
+        <div class="input-group-prepend">
+            <span style="width: 200px;">검색:</span>
+            <select class="custom-select" name="type">
+
+                <option>제목 </option>
+                <option>내용</option>
+                <option>작성자</option>
+                <option>제목+내용</option>
+            </select>
         </div>
         <table class="table">
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">제목</th>
-                <th scope="col">모임날짜</th>
-                <th scope="col">장소</th>
-                <th scope="col">모임인원</th>
-                <th scope="col">Dday</th>
+                <th scope="col">토론주제</th>
+                <th scope="col">투표Dday</th>
+                <th scope="col">찬성/반대/중립 숫자</th>
+                <th scope="col">상태</th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <th scope="row">1</th>
                 <td>
-
-                    <a href="/Meeting/read" >모임 제목</a>
+                    우리동네 이름 바꿔야 하나?
+                    <a href="/Debate/read" class="btn btn-primary " >상세보기</a>
 
 
                 </td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>D-10</td>
                 <td></td>
-                <td></td>
-
+                <td>진행중</td>
             </tr>
             <tr>
                 <th scope="row">2</th>
-                <td>모임제목  </td>
-                <td>Thornton</td>
+                <td>우리 학교 이름 바꿔야 하나? </td>
+                <td>D-10</td>
                 <td></td>
-                <td></td>
+                <td>진행중</td>
             </tr>
             <tr>
                 <th scope="row">3</th>
                 <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
+                <td>D-10</td>
                 <td></td>
-                <td></td>
+                <td>진행중</td>
             </tr>
             </tbody>
         </table>
@@ -64,7 +67,7 @@
             </ul>
         </nav>
 
-        <a href="/Meeting/write" class="btn btn-primary">모임 글작성</a>
+        <a href="/Debate/write" class="btn btn-primary">토론 글작성(관리자)</a>
 
 
     </th:block>

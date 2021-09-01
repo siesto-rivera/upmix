@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+    <th:block th:fragment="content">
+        <h3 class="w-100 p-3 text-center"> 투표 상세보기   </h3>
+
+        <table>
+            <tr>
+                <td>현재단계:</td>
+                <td>현재단계(진행중 여부),투표기한을 볼 수 있습니다 </td>
+            </tr>
+
+            <tr>
+                <td>관련제안</td>
+                <td>관련제안의 공감/댓글 숫자를 볼 수 있습니다.</td>
+            </tr>
+            <tr>
+                <td>관련토론:</td>
+                <td>관련토론을 볼 수 있습니다.</td>
+            </tr>
+            <tr>
+                <td>투표기간</td>
+                <td>시작일 ~ 종료일</td>
+            </tr>
+
+            <tr>
+                <td>제목</td>
+                <td>제목...</td>
+            </tr>
+            <tr>
+                <td>내용</td>
+                <td>내용.....첨부파일</td>
+            </tr>
+            <tr>
+                <td>공유:</td>
+                <td><div th:replace="/common/sns_share" /></td>
+            </tr>
+            <tr>
+                <td>투표항목 상세내용</td>
+                <td>
+
+                    <p>투표하기 (찬반투표/ 우선순위 투표)   -  </p>
+                    <button class="btn btn-dark">문자인증</button>
+
+                    <h3 class="w-100 p-3 text-center"> 찬반투표  </h3>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" />
+                        <label class="form-check-label" for="exampleRadios1">
+                            찬성
+                        </label>
+                        <br>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" />
+                        <label class="form-check-label" for="exampleRadios2">
+                            반대
+                        </label>
+                    </div>
+
+                    <div>
+                        <h3 class="w-100 p-3 text-center"> 우선순위 투표  </h3>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" >
+                            <label class="form-check-label" for="inlineCheckbox3">3 </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option3" >
+                            <label class="form-check-label" for="inlineCheckbox3">4 </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option3" >
+                            <label class="form-check-label" for="inlineCheckbox3">5 </label>
+                        </div>
+                    </div>
+
+
+                </td>
+            </tr>
+            <tr>
+                <td>투표결과</td>
+                <td>투표완료시 투표결과를 볼 수 있습니다.  또는 결과노출방법에 따라 투표기간 중 또는 투표종료 후.</td>
+            </tr>
+            <tr>
+                <td>댓글/대댓글 작성할 수 있습니다.   댓글/대댓글 목록</td>
+                <td>댓글/대댓글을 신고할수 있습니다</td>
+            </tr>
+        </table>
+
+
+
+
+
+
+
+
+
+        <a href="/Vote/Topics/write" class="btn btn-primary">수정하기(관리자)</a>
+
+
+
+
+    </th:block>
+
+
+</th:block>

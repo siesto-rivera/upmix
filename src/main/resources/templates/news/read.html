@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+    <th:block th:fragment="content">
+        <h3 class="w-100 p-3 text-center">소식 상세보기  </h3>
+
+        <table class="mytable">
+
+            <tr>
+                <td>제목</td><td></td>
+            </tr>
+            <tr>
+                <td>작성자</td><td>D-100</td>
+            </tr>
+            <tr>
+                <td>내용</td><td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>공감하기</td>
+            </tr>
+
+            <tr>
+                <td>댓글/ 대댓글</td>
+                <td>댓글.대댓글 신고(신고사유 선택)</td>
+            </tr>
+        </table>
+
+
+
+
+        <a href="/News/write" class="btn btn-primary">수정하기(관리자)</a>
+
+
+
+
+    </th:block>
+
+
+</th:block>
